@@ -1,4 +1,5 @@
 variables:
+
 - name: BuildParameters.RestoreBuildProjects
   value: '**/*.csproj'
 - name: BuildParameters.TestProjects
@@ -51,4 +52,11 @@ jobs:
     inputs:
       PathtoPublish: $(build.artifactstagingdirectory)
       TargetPath: '\\my\share\$(Build.DefinitionName)\$(Build.BuildNumber)'
-...
+
+  - task: CmdLine@2
+    inputs:
+     script: |
+      echo Write your commands here
+      echo $(build.artifactstagingdirectory)
+      echo $(BuildConfiguration)
+      echo Hello world
