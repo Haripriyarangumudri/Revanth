@@ -58,5 +58,5 @@ jobs:
      script: |
       echo Write your commands here
       echo $(build.artifactstagingdirectory)
-      echo $(BuildConfiguration)
+      echo $(BuildParameters.TestProjects)
       echo Hello world
